@@ -1,0 +1,372 @@
+.modal-box {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 80%;
+  max-width: 1000px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;  
+  border: solid 8px #333;
+  overflow: hidden;
+  overflow-y: hidden;
+  border-radius: 0px;
+  scale: 1;
+  transition: scale .3s ease-in-out;
+  @starting-style {
+    scale: 0;
+  }
+}
+
+.modal-box-content {
+  overflow-y: hidden;
+  height: 100%;
+  background-color: #333;
+}
+
+.container-box {
+  display: flex;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  border-left: 0px solid #1e1e1e;
+}
+
+.menu-item i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.menu-item.selected {
+  background-color: #0d0d0d;
+  border-left: solid 6px #666666;
+}
+
+.menu-item span {
+  font-size: 18px;
+}
+
+.menu-item:hover {
+  background-color: #575757;
+}
+
+.content-box {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #FFF;
+  height: 100vh;
+  padding-bottom: 30%;
+  box-sizing: border-box;
+}
+
+.section {
+  display: none;
+  padding: 30px;
+}
+
+.section.active {
+  display: block;
+}
+
+.content-box h1 {
+  margin-top: 0;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal-box {
+  position: absolute;
+  top: 0.0rem;
+  right: 0.0rem;
+  font-size: 3rem;
+  color: #FFF;
+  cursor: pointer;
+  border: 1px solid #333;
+  background: #333;
+  z-index: 99;
+  width: 60px;
+  height: 60px;
+}
+
+.close-modal-box:hover {
+  background: #555;
+}
+
+/* Secciones */
+.section {
+  margin-bottom: 30px;
+}
+
+.section h1 {
+  font-size: 1.8em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+details {
+  border: 1px solid #ddd;
+  margin: 20px 0 20px 0;
+  padding: 20px;
+  line-height: 1.5em;
+}
+
+details summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 25px;
+  font-size: 1.2em;
+}
+
+details[open] summary {
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  background-color: #e0e0e0;
+}
+
+details p, .details ol {
+  margin: 10px 0;
+  padding: 0 15px;
+}
+
+details ol {
+  padding-left: 60px;
+}
+
+/* Formulario */
+input[type="range"], input[type="button"] {
+  margin: 10px 0;
+}
+
+label {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  appearance: none;
+  display: block;
+  width: 100%;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #3157db;
+  cursor: pointer;
+  appearance: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #3157db;
+  cursor: pointer;
+}
+
+.btn-default {
+  display: flex;
+  align-items: center; /* Alinea el contenido verticalmente */
+  justify-content: center; /* Alinea el contenido horizontalmente */
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-default i.material-icons {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.btn-default:hover {
+  background-color: #555;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #a4a4a4;
+}
+
+.link-default {
+  display: flex;
+  align-items: center; /* Alinea el contenido verticalmente */
+  background-color: #3157db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  width: 80%;
+  min-width: 220px;
+  text-decoration: none;
+}
+
+.link-default i.material-icons {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.link-default:hover {
+  background-color: #4a6cdf;
+}
+
+/* Créditos */
+.section#creditos p {
+  margin: 5px 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+/* Estilo para el contenedor del checkbox */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+/* Oculta el checkbox nativo */
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+/* Estilo para el checkbox personalizado */
+.custom-checkbox input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Estilo para el cuadro del checkbox */
+.custom-checkbox input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30px; /* Ajusta según el tamaño deseado */
+  width: 30px;  /* Ajusta según el tamaño deseado */
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilo para la marca de verificación */
+.custom-checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 8px; /* Ajusta para centrar la marca */
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 10px; /* Ajusta el tamaño de la marca */
+  height: 20px; /* Ajusta el tamaño de la marca */
+  border: solid #333;
+  border-width: 0 4px 4px 0;
+}
+
+/* Estilo de enfoque */
+.custom-checkbox input[type="checkbox"]:focus + label::before {
+  outline: 2px solid #333;
+}
+
+.lbl-copyright {
+  color: #797979;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.logo-credits {  
+  width: 130px;
+  margin: auto;
+  padding: 10px;
+  display: block;
+}
+
+/* ------------------------------------------------- */
+
+/*** Scroll Bar ***/
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #CCC;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #CCC;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 20px;
+    border: 3px solid #CCC;
+  } 
+

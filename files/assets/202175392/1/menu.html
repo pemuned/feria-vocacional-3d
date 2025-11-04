@@ -1,0 +1,179 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="container-box">
+  <div class="sidebar">
+    <div class="menu-item" data-section="instrucciones">
+      <i class="material-icons">description</i>
+      <span>Instrucciones</span>
+    </div>
+    <div class="menu-item" data-section="configuracion">
+      <i class="material-icons">settings</i>
+      <span>Configuración</span>
+    </div>
+    <div class="menu-item" data-section="guia-uso">
+      <i class="material-icons">book</i>
+      <span>Más información</span>
+    </div>
+    <div class="menu-item" data-section="creditos">
+      <i class="material-icons">info</i>
+      <span>Créditos</span>
+    </div>
+  </div>
+  <div class="content-box">
+    <div class="section" id="instrucciones">
+      <h1>Instrucciones</h1>
+      <details open>
+        <summary>
+          Instrucciones de uso desde computadora
+        </summary>
+        <p>Para hacer el recorrido, desde una computadora (laptop o de escritorio) tome en cuenta las siguientes
+          recomendaciones:</p>
+        <ol>
+          <li>Podrá tener un movimiento de 360° para la visualización de todos los ángulos del parque, moviendo el mouse
+            de derecha a izquierda, así como de arriba hacia abajo; si experimenta alguna dificultad para realizar este
+            movimiento, se le sugiere levantar levemente el mouse y continuar el recorrido.</li>
+          <li>Pulse el botón izquierdo de su mouse para avanzar hacia adelante y
+            el botón derecho para retroceder.</li>
+          <li>Podrá utilizar también las flechas de su teclado para avanzar y realizar los distintos movimientos de
+            desplazamiento.</li>
+        </ol>
+      </details>
+      <details open>
+        <summary>
+          Instrucciones de uso desde dispositivo móvil
+        </summary>
+        <p>Para hacer el recorrido, desde una computadora (laptop o de escritorio) tome en cuenta las siguientes
+          recomendaciones: </p>
+        <ol>
+          <li>Mantenga el dispositivo en forma horizontal para una mejor visualización de todos los elementos que
+            contiene el entorno.</li>
+          <li>Podrá tener un movimiento de 360° para la visualización de todos los ángulos del parque,
+            moviendo sus dedos de derecha a izquierda, así como de arriba hacia abajo,
+            esto sobre cualquier espacio de la pantalla de su dispositivo móvil.</li>
+          <li>Pulse las flechas que se encuentran en la parte inferior izquierda de la pantalla, que le desplazarán
+            hacia adelante o atrás.</li>
+        </ol>
+      </details>
+    </div>
+    <div class="section" id="configuracion">
+      <h1>Configuración</h1>
+      <details open>
+        <summary>Gráficos</summary>
+        <div class="custom-checkbox">
+          <input type="checkbox" id="chk_graphics">
+          <label for="chk_graphics">Calidad alta de gráficos</label>
+        </div>
+        <br>
+        <div class="custom-checkbox">
+          <input type="checkbox" id="chk_shadows">
+          <label for="chk_shadows">Activar sombras</label>
+        </div>
+        <br>
+        <div class="custom-checkbox">
+          <input type="checkbox" id="chk_lights">
+          <label for="chk_lights">Activar luces</label>
+        </div>
+      </details>
+      <details open>
+        <summary>Sensibilidad de movimiento de la cámara</summary>
+        <label for="sld_mouse_sensitivity">Sensibilidad del Mouse (computadora): <span
+            id="lbl_mouse_sensitivity">5</span></label>
+        <input type="range" min="2" max="8" value="5" class="slider" id="sld_mouse_sensitivity" step="0.1">
+        <br>
+        <label for="sld_touch_sensitivity">Sensibilidad Touch (dispositivo móvil): <span
+            id="lbl_touch_sensitivity">8</span></label>
+        <input type="range" min="5" max="10" value="8" class="slider" id="sld_touch_sensitivity" step="0.1">
+        <br>
+        <label for="sld_player_speed">Velocidad del jugador: <span id="lbl_player_speed">2.5</span></label>
+        <input type="range" min="1" max="3" value="2.5" class="slider" id="sld_player_speed" step="0.1">
+        <br>
+        <button type="button" id="btn_set_default" class="btn btn-default"><i
+            class="material-icons">settings_backup_restore</i>Restablecer valores predeterminados</button>
+
+      </details>
+      <details open>
+        <summary>Sonido</summary>
+        <label for="sld_volume">Volumen: <span id="lbl_volume">1</span></label>
+        <input type="range" min="0" max="1" step="0.01" value="1" class="slider" id="sld_volume">
+        <br>
+        <div class="hidden">
+          <div class="custom-checkbox">
+            <input type="checkbox" id="chk_welcome">
+            <label for="chk_welcome">Activar audio de bienvenida cada vez que se inicia</label>
+          </div>
+          <br>
+          <button type="button" id="btn_skip_welcome" class="btn btn-default"><i
+              class="material-icons">volume_off</i>Saltar bienvenida</button>
+        </div>
+      </details>
+    </div>
+    <div class="section" id="guia-uso">
+      <h1>Más información</h1>
+      <p>Consulta el sitio web de la Feria Vocacional en línea para más información.</p>
+      <br>
+      <a href="https://feriavocacional.uned.ac.cr/" target="_blank" class="link-default"
+        title="Ver sitio web de la Feria Vocacional"><i class="material-icons">book</i>Sitio Web de la Feria Vocacional
+        en Línea UNED [↗]</a>
+    </div>
+    <div class="section" id="creditos">
+      <h1>Créditos</h1>
+      <img src="" alt="logo institucional" class="logo-credits logo-uned" width="100">
+      <p>
+        Feria Vocacional en Línea UNED<br>
+        SW012023<br>
+        Versión 4.0<br>
+        Publicación noviembre 2023<br><br>
+        Esta es una producción de la Universidad Estatal a Distancia<br>
+        Universidad Estatal a Distancia<br><br>
+        Con la colaboración de:<br><br>
+        Oficina de Orientación y Desarrollo Estudiantil, OFODE<br>
+        Dirección de Producción de Materiales Didácticos, DPMD<br>
+        Programa de Producción Electrónica Multimedial, PEM<br>
+      </p>
+      <h2>Contenido</h2>
+      <p>
+        Contenido: Ingrid Chaves Mata<br>
+        Edición web: Rodolfo Guerrero Herrera<br>
+      </p>
+      <h2>Producción multimedia</h2>
+      <p>
+        Producción: Marco Sánchez Mora<br>
+        Diseño gráfico: Raquel Badilla Barrientos<br>
+        Desarrollo, Arte y diseño 3D: Deiver Herrera Sánchez<br>
+      </p>
+      <h2>Producción audiovisual:</h2>
+      <p>
+        Sergio Castro Flores, Marco Sánchez Mora<br>
+      </p>
+      <h2>Otros recursos</h2>
+      <p>
+        "Urban Tree" (<a href="https://skfb.ly/oxPF7" target="_blank" title="Urban Tree">https://skfb.ly/oxPF7</a> por
+        gelmi.com.br bajo licencia de Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+        <br>
+        "Free Tree 1" (<a href="https://skfb.ly/6SUAC" target="_blank" title="Free Tree 1">https://skfb.ly/6SUAC</a>)
+        por Giimann bajo licencia de Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+      </p>
+      <h2>Derecho de Autor</h2>
+      <p>
+        ADVERTENCIA: Los derechos patrimoniales de la presente obra pertenecen en su totalidad a la Universidad Estatal
+        a Distancia de Costa Rica (UNED),
+        por lo que está prohibida su copia o reproducción, comunicación pública, puesta a disposición del público,
+        transmisión, transformación
+        (incluyendo adaptación y traducción), distribución, alquiler o venta de ejemplares, realizada por cualquier
+        medio o procedimiento,
+        conocido o por conocerse, sin el consentimiento previo por escrito del titular de los derechos. Eludir esta
+        prohibición,
+        o las medidas tecnológicas de protección que contenga la obra, constituye una conducta sancionada por normas de
+        propiedad intelectual.
+      </p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <hr>
+      <p class="lbl-copyright">
+        ©<span id="lbl_year"></span> UNED | Feria Vocacional en Línea UNED<br>versión <span id="lbl_version"></span>
+      </p>
+    </div>
+  </div>
+</div>

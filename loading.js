@@ -1,4 +1,4 @@
-var app_version = "2026.11.02";
+var app_version = "2026.11.03";
 
 pc.script.createLoadingScreen(function (app) {
   var showSplash = function () {
